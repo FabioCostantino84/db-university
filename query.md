@@ -23,6 +23,8 @@ SELECT * FROM `degrees` WHERE `name` LIKE '%Magistrale%'
 7. Da quanti dipartimenti è composta l'università? (12)
 SELECT * FROM `departments`;
 
+SELECT COUNT(*) AS `departments_count` FROM `departments`; // non sono sicuro si corretto
+
 SELECT * FROM `departments` WHERE `id` IS NOT NULL;
 
 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
