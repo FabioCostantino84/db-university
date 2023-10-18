@@ -30,3 +30,5 @@ SELECT * FROM `departments` WHERE `id` IS NOT NULL;
 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 SELECT * FROM `teachers` WHERE `phone` IS NULL
 
+SELECT COUNT(*) as `count_teachers` FROM `teachers` WHERE phone is not null; // soluzione migliore, perchè piu snella e riutilizzabile.
+

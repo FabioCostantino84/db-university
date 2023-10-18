@@ -8,6 +8,13 @@ SELECT YEAR(enrolment_date) AS enrolment_year,
     ORDER BY enrolment_year DESC;
 ```
 - 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+```sql
+select office_address,     
+     count(*) as total_teachers
+     from teachers
+     group by office_address 
+     order by total_teachers asc;
+```
 - 3. Calcolare la media dei voti di ogni appello d'esame
 - 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
 
