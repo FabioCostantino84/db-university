@@ -16,6 +16,11 @@ select office_address,
      order by total_teachers asc;
 ```
 - 3. Calcolare la media dei voti di ogni appello d'esame
+```sql
+select exam_id, avg(vote) as average_rating
+    -> from exam_student
+    -> group by exam_id;
+```
 - 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
 
 # Joins:
