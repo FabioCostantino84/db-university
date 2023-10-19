@@ -62,7 +62,13 @@ WHERE `course_teacher`.`teacher_id` = 44;
 ```
 - 6. Selezionare tutti i docenti che insegnano nel Dipartimento di Matematica (54)
 ```sql
-
+SELECT DISTINCT `teachers`.`id`, `teachers`.`name`, `teachers`.`surname` 
+FROM `teachers`
+JOIN `course_teachers` ON  `teachers`.`id` = `course_teacher`.`teacher_id`
+JOIN `courses` ON `course_teacher`.`course`.`id` = `courses`.`id`
+JOIN `degrees` ON `courses`.`degree_id` = `degrees`.`id`
+JOIN `departments` ON `degrees`.`department_id` = `departments`.`id`
+WHERE `departments`.`id` = 5;
 ```
 # BONUS: 
 - 7. Selezionare per ogni studente il numero di tentativi sostenuti per ogni esame, stampando anche il voto massimo. Successivamente, filtrare i tentativi con voto minimo 18.
